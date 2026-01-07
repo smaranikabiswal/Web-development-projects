@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="product-details">
+        <h1>Perfume 1 - Floral, Sweet, Elegant</h1>
+        <p>This is a detailed description of the perfume. Explore the notes, ingredients, and more!,contact us if you want to know more:)</p>
+        <img src="perfume2.jpeg" alt="Perfume 1">
+    </section>
+
+    <script>
+        // Confirmation before redirection
+        const userConfirmed = confirm("Do you want to continue to the product details page?");
+        if (!userConfirmed) {
+            window.location.href = "index.html"; // Redirect to homepage if the user clicks 'Cancel'
+        }
+    </script>
+</body>
+</html>
