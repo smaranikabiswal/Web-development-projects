@@ -1,0 +1,236 @@
+<<<<<<< HEAD
+body{
+   text-align: center;
+}
+.btn{
+    border-radius: 20%;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    margin: 2rem;
+   
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+}
+.pink{
+    background-color: pink;
+}
+.purple{
+    background-color: rgb(193, 163, 220);
+}
+.yellow{
+    background-color: rgb(221, 221, 90);
+}
+.sky{
+    background-color: skyblue;
+}
+.flash{
+    background-color: white;
+}
+.userflash{
+    background-color: green;
+}
+=======
+<<<<<<< HEAD
+/* Basic Reset */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Header */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Home Section */
+#home {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e0e0e0;
+}
+
+#catalog {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.perfume-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.perfume-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.perfume-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.perfume-card h3 {
+    margin-top: 10px;
+}
+
+.perfume-card:hover {
+    transform: scale(1.1); /* Hover effect for card */
+}
+
+button {
+    background-color: #d234da;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32a5f;
+}
+
+/* Footer */
+footer {
+    background-color: #d75454;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+=======
+
+:root {
+    --bg-color: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --accent-color: #38bdf8;
+    --text-color: #ffffff;
+}
+
+[data-theme="light"] {
+    --bg-color: #f1f5f9;
+    --glass-bg: rgba(0, 0, 0, 0.05);
+    --accent-color: #0284c7;
+    --text-color: #1e293b;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.4s ease;
+}
+
+.calculator {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 350px;
+}
+
+#display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    text-align: right;
+    margin-bottom: 0.5rem;
+}
+
+#status-text {
+    font-size: 0.8rem;
+    text-align: right;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.equals {
+    grid-column: span 2;
+    background: var(--accent-color);
+    font-weight: bold;
+}
+
+
+.listening {
+    animation: pulse 1.5s infinite;
+    background: #ef4444 !important;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+>>>>>>> 5703a884e9dd3878f731762ad05f996c1bbd05da
+>>>>>>> f38afc0fe783236e412a19b8e575722d1db382f1
