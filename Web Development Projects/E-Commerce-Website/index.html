@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora - Premium Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <i class="fas fa-star"></i> Aurora
+            </a>
+            <ul id="MenuItems" class="nav-menu">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('products')">Products</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                <li><a href="#" onclick="showPage('cart')">
+                    <i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)
+                </a></li>
+            </ul>
+            <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+    <main id="mainContent">
+        
+        <section id="home" class="page active">
+            <div class="hero-banner">
+                <div class="banner-overlay">
+                    <div class="banner-content">
+                        <span class="banner-label">NEW ARRIVALS 2026</span>
+                        <h1 class="banner-title">ELEVATE YOUR STYLE</h1>
+                        <p class="banner-text">Experience the fusion of luxury and comfort with our curated seasonal collection.</p>
+                        <button class="banner-btn" onclick="showPage('products')">EXPLORE COLLECTION</button>
+                    </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1600&q=80" alt="Aurora Banner" class="banner-img">
+            </div>
+
+            <section class="featured container">
+                <h2 class="section-title">Featured Products</h2>
+                <div id="featuredProducts" class="product-grid"></div>
+            </section>
+        </section>
+
+        <section id="products" class="page">
+            <div class="container">
+                <h1 class="page-title">Our Collection</h1>
+                <div class="categories">
+                    <button class="cat-btn active" data-category="all">All</button>
+                    <button class="cat-btn" data-category="women">Women</button>
+                    <button class="cat-btn" data-category="men">Men</button>
+                    <button class="cat-btn" data-category="kids">Kids</button>
+                    <button class="cat-btn" data-category="shoes">Shoes</button>
+                </div>
+                <div id="productGrid" class="product-grid"></div>
+                <div class="pagination">
+                    <button class="page-btn" onclick="changePage(-1)"><i class="fas fa-chevron-left"></i></button>
+                    <span id="pageInfo">Page 1</span>
+                    <button class="page-btn" onclick="changePage(1)"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-detail" class="page">
+            <div class="container">
+                <button class="back-btn" onclick="showPage('products')">
+                    <i class="fas fa-arrow-left"></i> Back to Products
+                </button>
+                <div class="product-main">
+                    <div class="product-images">
+                        <img id="mainImg" src="" alt="Product" class="main-product-img">
+                        <div id="thumbnails" class="thumbnails"></div>
+                    </div>
+                    <div class="product-info">
+                        <h1 id="prodName" class="product-title"></h1>
+                        <p id="prodDesc" class="product-desc"></p>
+                        <div class="price-section">
+                            <span class="price" id="basePrice">₹0</span>
+                            <span class="total-price" id="totalPrice">₹0</span>
+                        </div>
+                        <div class="selection-group">
+                            <div class="qty-section">
+                                <label>Quantity:</label>
+                                <div class="qty-controls">
+                                    <button onclick="updateQty(-1)" class="qty-btn">-</button>
+                                    <span id="qty">1</span>
+                                    <button onclick="updateQty(1)" class="qty-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="color-section">
+                                <label>Color:</label>
+                                <div id="colors" class="colors"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" onclick="addToCartFromDetail()">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page">
+            <div class="container">
+                <h1 class="page-title">About Aurora</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Founded in <strong>2025</strong> in New Delhi, Aurora was built on the belief that premium fashion should be accessible. We serve over 10k+ customers nationwide with a focus on quality and timeless design.</p>
+                        <p>Our collection features curated pieces ranging from luxury timepieces to handcrafted leather goods.</p>
+                    </div>
+                    <div class="team-section">
+                        <div class="team-member">
+                            <img src="https://i.pravatar.cc/150?img=1" alt="Rahul Sharma">
+                            <h3>Rahul Sharma</h3>
+                            <p>CEO & Founder</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://i.pravatar.cc/150?img=2" alt="Priya Patel">
+                            <h3>Priya Patel</h3>
+                            <p>Co-Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="container">
+                <h1 class="page-title">Contact Us</h1>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <h3>Visit Us</h3>
+                                <p>Connaught Place, New Delhi, 110001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>hello@aurora.store</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="page">
+            <div class="container">
+                <h1 class="page-title">Your Cart</h1>
+                <div id="cartItems" class="cart-items"></div>
+                <div class="cart-summary">
+                    <div class="cart-total">
+                        <h3>Total: <span id="cartTotal">₹0</span></h3>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                        <button class="btn btn-primary" onclick="proceedToOrder()">Proceed to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><i class="fas fa-heart"></i> © 2026 Aurora Fashion Store. New Delhi, India.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
