@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <div class="app-container">
+        <div class="header">
+            <h1>✨ TaskMaster</h1>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme"></button>
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat">
+                <div class="stat-number" id="total-tasks">0</div>
+                Total
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="completed-tasks">0</div>
+                Completed
+            </div>
+            <div class="stat">
+                <div class="stat-number" id="priority-tasks">0</div>
+                High Priority
+            </div>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="What needs to be done? 💡" maxlength="80">
+            <div class="input-options">
+                <select id="priority-select">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="due-date">
+            </div>
+            <button id="add-btn">🚀 Add Task</button>
+        </div>
+
+        <ul class="task-list" id="task-list"></ul>
+
+        <div class="actions">
+            <button class="clear-btn" id="clear-completed">🗑️ Clear Completed</button>
+            <button class="clear-btn" id="clear-all">💥 Clear All</button>
+        </div>
+
+        <div class="empty-state" id="empty-state">
+            <div>🎉 No tasks yet!</div>
+            <div>Add your first task above 🚀</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
